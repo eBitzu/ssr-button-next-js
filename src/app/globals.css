@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 pre {
   white-space: pre-wrap;
@@ -8,6 +6,12 @@ pre {
   word-break: break-word;
   margin: 0 auto;
   margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 @media screen and (min-width: 62rem) {
   pre {

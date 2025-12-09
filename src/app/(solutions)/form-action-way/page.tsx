@@ -8,14 +8,14 @@ import { SeverFunction2 } from '../../../actions';
 export default async function Solution2() {
   const title = await contentfulClient.getEntry(ButtonTitleEntryId);
   const data = await fetchData();
-  const color = cookies().get('x-color')?.value ?? 'blue';
+  const color = (await cookies()).get('x-color')?.value ?? 'blue';
   return (
     <>
-      <form>
+      <form action={SeverFunction2}>
         <input type="hidden" value={color} name="color" />
         <button
           title={title.fields.ctaLabel as string}
-          formAction={SeverFunction2}
+          type="submit"
           className={`bg-${color}-500`}
         >
           with RS form action - {data}

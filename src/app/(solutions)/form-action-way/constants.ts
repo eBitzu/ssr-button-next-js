@@ -3,7 +3,7 @@ export const FormActionPre = `
 export async function Solution3Page() {
   const title = await contentfulClient.getEntry(ButtonTitleEntryId);
   const data = await fetchData();
-  const color = cookies().get('x-color')?.value ?? 'blue';
+  const color = (await cookies()).get('x-color')?.value ?? 'blue';
   return (<>
      <form>
       <input type="hidden" value={color} name="color" />
